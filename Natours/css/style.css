@@ -44,12 +44,14 @@ body {
     top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
+    text-align: center;
 }
 
 .heading-primary {
     color: #ffffff;
     text-transform: uppercase;
     backface-visibility: hidden;
+    margin-bottom: 60px;
 }
 
 .heading-primary-main {
@@ -72,12 +74,27 @@ body {
     animation-timing-function: ease-out;
 }
 
-.btn:link {
-
+.btn:link,
+.btn:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 15px 40px;
+    border-radius: 100px;
+    display: inline-block;
+    backface-visibility: hidden;
 }
 
-.btn:visited {
-    
+.btn:hover {
+    transform: translateY(-3px);
+}
+
+.btn:active {
+    transform: translateY(-1px);
+}
+
+.btn-white {
+    background-color: #fff;
+    color: #777;
 }
 
 @keyframes moveInLeft {
