@@ -207,7 +207,7 @@ body {
   right: 6rem;
   z-index: 2000;
   box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.2);
-  text-align: -webkit-center; }
+  text-align: center; }
 
 .navigation__background {
   height: 6rem;
@@ -277,7 +277,8 @@ body {
     width: 3rem;
     height: 2px;
     background-color: #333;
-    display: block; }
+    display: inline-block;
+    transition: all .5s; }
   .navigation__icon::before, .navigation__icon::after {
     content: '';
     position: absolute;
@@ -286,6 +287,17 @@ body {
     top: -.8rem; }
   .navigation__icon::after {
     top: .8rem; }
+
+.navigation__checkbox:checked + .navigation__button .navigation__icon {
+  background-color: transparent; }
+
+.navigation__checkbox:checked + .navigation__button .navigation__icon::before {
+  transform: rotate(135deg);
+  top: 0; }
+
+.navigation__checkbox:checked + .navigation__button .navigation__icon::after {
+  transform: rotate(-135deg);
+  top: 0; }
 
 /*pages section*/
 .section-about {
